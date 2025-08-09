@@ -10,11 +10,11 @@ from datetime import datetime, timedelta
 import json
 import urllib3
 import MajorLoginRes_pb2
-app.use(cors())
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
-
+CORS(app)
 url = "https://changgetsty.vercel.app/"
 
 response = requests.get(url)
@@ -364,4 +364,5 @@ def get_player_info(region):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
 
