@@ -1,3 +1,4 @@
+import cors
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import requests
@@ -9,7 +10,7 @@ from datetime import datetime, timedelta
 import json
 import urllib3
 import MajorLoginRes_pb2
-
+app.use(cors())
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
@@ -46,7 +47,102 @@ VALID_KEYS = ["yumik1", "stylescript0087"]
 
 CORS(app, origins=[
 
-      "https://tsstye.netlify.app"
+      "https://bimbimpraprabim.netlify.app",
+    "https://recargasjogobr.com",
+    "https://recargajogoevento.com",
+    "https://recargajogosff.com",
+    "https://eventorecargajogo.com",
+    "https://recargajogogarena.com",
+    "https://recargasjogoff.com",
+    "https://freefiresquad.com",
+    "https://recargasjogosfrifas.com",
+    "https://eventorecargasjogosfrifas.com",
+    "https://eventorecargasjogoff.com",
+    "https://eventorecargajogogarena.com",
+    "https://eventorecargasjogos.com",
+    "https://eventorecargajogosff.com",
+    "https://oficial.eventorecargajogosff.com",
+    "https://parceria.eventorecargajogosff.com",
+    "https://questionario.eventorecargajogosff.com",
+    "https://garena.eventorecargasjogos.com",
+    "https://ff.eventorecargasjogos.com",
+    "https://premio.eventorecargasjogos.com",
+    "https://dbz.eventorecargasjogoff.com",
+    "https://freefire.eventorecargasjogoff.com",
+    "https://desconto.eventorecargasjogoff.com",
+    
+    "https://eventorecargajogobr.com",
+    "https://eventorecargasjogobr.com",
+    "https://eventorecargasjogosbr.com",
+    "https://eventorecargajogos.com",
+    "https://eventorecargacajogoff.com",
+    "https://recargasjogos.com",
+    "https://recargajogobr.com",
+    "https://eventorecargajogoff.com",
+    
+    "https://recargasjogosevento.com",
+    "https://recargajogoeventos.com",
+    "https://recargajogoevents.com",
+    "https://recargajogoseventos.com",
+    "https://recargasjogoevento.com",
+    "https://recargasjogoeventos.com",
+    "https://recargajogoeventobr.com",
+    "https://recargajogoeventosbr.com",
+
+    "https://recargacajogo.com",
+    "https://recaregajogo.com",
+        "https://recargajogosff.com",
+    "https://recargasjogoevento.com",
+    "https://recargajogoeventos.com",
+    "https://recargasjogoeventos.com",
+    "https://recargajogoseventos.com",
+  "https://especial-recargajogo.com",
+  "https://evento-recargajogo.com",
+  "https://naruto-recargajogo.com",
+  "https://cupom-recargajogo.com",
+  "https://regarcajogo.com",
+  "https://recargaejogo.com",
+  "https://recargasejogo.com",
+  "https://recargojogo.com",
+  "https://recaregojogo.com",
+  "https://recarganjogo.com",
+  "https://recargamjogo.com",
+  "https://recaregacajogo.com",
+  "https://recaregasjogo.com",
+  "https://recaregajogos.com",
+  "https://recareganjogo.com",
+      "https://garena-recargajogo.com",
+  "https://ff-recargajogo.com",
+  "https://freefire-recargajogo.com",
+  "https://cupons-recargajogo.com",
+  "https://promocoes-recargajogo.com",
+  "https://eventos-recargajogo.com",
+  "https://events-recargajogo.com",
+  "https://recargazjogo.com",
+  "https://recaregarjogo.com",
+  "https://recarrgajogo.com",
+    "https://garena-recargajogo.com",
+  "https://ff-recargajogo.com",
+  "https://shippuden-recargajogo.com",
+  "https://cupons-recargajogo.com",
+  "https://recargjogo.com",
+  "https://eventos-recargajogo.com",
+  "https://events-recargajogo.com",
+  "https://recargazjogo.com",
+  "https://recaregarjogo.com",
+  "https://recarrgajogo.com",
+    "https://recargajogoz.com",
+    "https://recargasjogoz.com",
+  "https://ff-recargajogos.com",
+  "https://recargazjogos.com",
+  "https://recarrgajogos.com",
+  "https://recargojogos.com",
+  "https://evento-recargajogos.com",
+  "https://recargajogoffbr.com",
+  "https://recargasjogoseventoff.com",
+  "https://recargajogoseventosbr.com",
+  "https://especial-recargajogos.com",
+  "https://especial-recargasjogos.com"
 
 ])
 jwt_cache = {
@@ -268,3 +364,4 @@ def get_player_info(region):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
